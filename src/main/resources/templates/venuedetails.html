@@ -1,0 +1,70 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-4.dtd">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" media="all" th:href="@{/css/style.css}" href="../static/css/style.css"/>
+    <title>Let's Party!</title>
+</head>
+<body>
+<div th:replace="fragments/header :: header">Header</div>
+
+
+<div class="row1">
+    <div class="row1content" th:if="${venue}">
+        <div class="prevButtonDiv">
+            <a class="buttonLook smallButton" th:href="@{|/venuedetails/${venue.id}/prev|}">&lt;</a>
+        </div>
+        <div class="nextButtonDiv">
+            <a class="buttonLook smallButton" th:href="@{|/venuedetails/${venue.id}/next|}">&gt;</a>
+        </div>
+
+        <h2 th:text="${venue.venueName}">venuedetails</h2>
+
+        <div class="venueinfo">
+            <div class="infoLine">
+                <div class="infoLineName">info:</div>
+                <div class="infoLineValue">
+                    <a th:href="${venue.linkMoreInfo}" th:text="${venue.linkMoreInfo}" target="_blank">linkMoreIfo</a>
+                </div>
+            </div>
+            <div class="infoLine">
+                <div class="infoLineName">max number of persons:</div>
+                <div class="infoLineValue" th:text="${venue.capacity}">max number of persons</div>
+            </div>
+            <div class="infoLine">
+                <div class="infoLineName">food provided:</div>
+                <div class="infoLineValue" th:text="${venue.isFoodProvided() ? 'yes' : 'no'}">isFoodProvided</div>
+            </div>
+            <div class="infoLine">
+                <div class="infoLineName">indoor:</div>
+                <div class="infoLineValue" th:text="${venue.isIndoor() ? 'yes' : 'no'}">isIndoor</div>
+            </div>
+            <div class="infoLine">
+                <div class="infoLineName">outdoor:</div>
+                <div class="infoLineValue" th:text="${venue.isOutdoor() ? 'yes' : 'no'}">isOutdoor</div>
+            </div>
+            <div class="infoLine">
+                <div class="infoLineName">free parking:</div>
+                <div class="infoLineValue" th:text="${venue.isFreeParkingAvailable() ? 'yes' : 'no'}">
+                    isFreeParkingAvailable
+                </div>
+            </div>
+            <div class="infoLine">
+                <div class="infoLineName">city:</div>
+                <div class="infoLineValue" th:text="${venue.city}">city</div>
+            </div>
+            <div class="infoLine">
+                <div class="infoLineName">distance from public transport:</div>
+                <div class="infoLineValue" th:text="${venue.distanceFromPublicTransportInKm} + ' km'">city</div>
+            </div>
+        </div>
+    </div>
+    <div class="row1content" th:unless="${venue}">
+        <p>no venue was chosen</p>
+    </div>
+</div>
+
+<div th:replace="fragments/footer :: footer">Footer</div>
+
+</body>
+</html>

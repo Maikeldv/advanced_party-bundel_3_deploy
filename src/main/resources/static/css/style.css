@@ -1,0 +1,244 @@
+/*
+    https://coolors.co/d0cfec-6a8e7f-989572-c6ae82-edc7cf
+SOAP: #D0CFEC;
+AUTOMETALSAURUS: #6A8E7F
+ARTICHOKE: #989572
+LIGHT FRENCH BEIGE: #C6AE82
+CAMEO PINK: #EDC7CF
+ */
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* general styles for html elements */
+
+body {
+    background-color: #D0CFEC;
+    color: #4c6c5d;
+    font-family: Bahnschrift, sans-serif;
+    margin: 0;
+}
+
+
+h1 {
+    margin: 20px 0;
+    text-align: center;
+    font-size: 4em;
+}
+
+h2 {
+    margin: 30px 0;
+    font-size: 2em;
+}
+
+p {
+    padding: 10px 50px;
+}
+
+hr {
+    border-color: #EDC7CF;
+    width: 70%;
+    margin: 5px auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* general layout shared by all pages */
+.nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    background-color: #6A8E7F;
+    color: #EDC7CF;
+    height: 150px;
+}
+
+.navbuttons {
+    display: flex;
+}
+
+.bottom {
+    background-color: #6A8E7F;
+    color: #EDC7CF;
+    height: 30px;
+    font-size: 0.7em;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.bottom p {
+    text-align: center;
+}
+
+.row1 {
+    display: flex;
+    position: relative;
+    margin: 100px 0 20px 0;
+    min-height: 500px;
+}
+
+.row1 img {
+    width: 100%;
+    height: auto;
+}
+
+.row1content {
+    flex-grow: 4;
+    margin: 40px 250px 40px 50px;
+}
+
+.row1content ul {
+    padding: 0;
+}
+
+.row1content li {
+    list-style: none;
+}
+
+.filters {
+}
+
+.onefilter {
+    margin: 2px 0;
+    display: flex;
+}
+
+.filtername {
+    width: 4em;
+    padding: 0.2em;
+}
+
+.buttons {
+    flex-grow: 1;
+    position: absolute;
+    top: 10px;
+    right: 50px;
+}
+
+
+/* links that do or don't look like buttons */
+a.buttonLook {
+    display: block;
+    background-color: #EDC7CF;
+    color: #6A8E7F;
+    text-decoration: none;
+    text-align: center;
+    box-shadow: 1px 1px 1px darkgrey;
+}
+
+a.buttonLook:hover {
+    background-color: #6A8E7F;
+    color: #EDC7CF;
+}
+
+a.buttonLook:active {
+    background-color: #6A8E7F;
+    color: #EDC7CF;
+}
+
+a.largeButton {
+    width: 200px;
+    font-size: 2em;
+    padding: 1em;
+}
+
+a.mediumButton {
+    margin: 10px auto;
+    width: 400px;
+    font-size: 1.2em;
+    padding: 1em;
+}
+
+a.smallButton {
+    display: block;
+    font-size: 1em;
+    padding: 0.5em;
+}
+
+a.menuButton {
+    margin: 0 10px;
+    width: 6em;
+    padding: 0.2em;
+}
+
+a.filterButton {
+    display: inline;
+    margin: 0 2px;
+    width: 2em;
+    padding: 0.2em;
+}
+
+a.activeFilter {
+    background-color: #f3a4b4;
+    color: #2b3e35;
+}
+
+a.linkLook {
+    background-color: transparent;
+    color: #6A8E7F;
+}
+
+a.linkLook:hover {
+    background-color: transparent;
+    color: #989572;
+}
+
+
+/* venue page only */
+.venueinfo {
+}
+
+.infoLine {
+    margin: 15px 0;
+    font-size: 1em;
+    display: flex;
+}
+
+.infoLineName {
+    width: 13em;
+/ / background-color: cadetblue;
+}
+
+.infoLineValue {
+    font-size: 1.2em;
+    text-align: left;
+/ / background-color: yellow;
+}
+
+.prevButtonDiv {
+    position: fixed;
+    left: 10px;
+    top: 160px;
+}
+
+.nextButtonDiv {
+    position: fixed;
+    right: 10px;
+    top: 160px;
+
+}
+
+/* home page only */
+
+.row2 {
+    background-color: #989572;
+    color: #EDC7CF;
+    height: 400px;
+    padding: 60px 0;
+}
+
+.row3 {
+    background-color: #C6AE82;
+    height: 300px;
+    padding: 60px 0;
+    text-align: center;
+}
+
+
